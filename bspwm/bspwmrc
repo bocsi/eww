@@ -1,0 +1,37 @@
+#! /bin/sh
+
+export PATH="${PATH}:${HOME}/.config/bspwm/bin"
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+systemctl --user import-environment DISPLAY &
+dunst &
+# start eww bar
+$HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
+xsetroot -cursor_name left_ptr &
+#picom  --corner-radius 12 &
+# Run polkit daemon if doesn't started.
+[ -n "$(pidof xfce-polkit)" ] || /usr/lib/xfce-polkit/xfce-polkit &
+
+bspc monitor -d 1 2 3 4 5 6
+
+bspc config border_width         2
+bspc config window_gap          10
+
+bspc config split_ratio          0.52
+
+bspc rule -a firefox desktop='^2' follow=on
+bspc rule -a URxvt desktop='^1' follow=on
+bspc rule -a Virt-manager desktop='^4' follow=on
+
+# if using eww bar #
+bspc config top_padding 48
+bspc subscribe node_state | while read -r _ _ _ _ state flag; do
+    if [ "$state" != "fullscreen" ]; then
+        continue
+    fi
+    if [ "$flag" == on ]; then
+        $HOME/.local/bin/eww -c $HOME/.config/eww/bar close-all
+  else
+        $HOME/.local/bin/eww -c $HOME/.config/eww/bar open bar
+    fi
+done &

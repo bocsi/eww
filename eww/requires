@@ -1,0 +1,2 @@
+for sound to work: alsa-lib alsa-plugins alsa-utils
+brightness: brightnessctl

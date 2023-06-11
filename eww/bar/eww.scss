@@ -1,0 +1,371 @@
+/** EWW.SCSS
+Created by saimoom **/
+*{
+	all: unset;
+	font-family: "FuraCode Nerd Font";
+}
+
+// Colors
+$background: #333c43;
+$foreground: #d3c6aa;
+
+$black: #1e2326;
+$gray: #9da9a0;
+$red: #e67e80;
+$green: #83c092;
+$yellow: #dbbc7f;
+$bright-yellow: #E9D6B2;
+$blue: #3f5865;
+$magenta: #d699b6;
+$cyan: #7fbbb3;
+$cyan-med: #98c8c2;
+$cyan-light: #b2d6d1;
+$white: #fef2d5;
+
+/** General **/
+.bar_class {
+    background-color: $background;
+    border-radius: 16px;
+}
+.module {
+    margin: 0px 0px 0px 0px;
+    border-radius: 10px 16px 0px 10px;
+}
+
+/** tooltip!! **/
+tooltip.background {
+    background-color: $background;
+    font-size: 14;
+    border-radius: 10px;
+    color: $foreground;
+}
+
+tooltip label {
+    margin: 6px;
+}
+
+
+/** Widgets **/
+.weatherbox{
+	margin: 0px 0px 0px 4px;
+}
+.weathericon {
+	color: $foreground;
+	font-weight: 900;
+}
+.weathertemp {
+	color: $foreground;
+	font-weight: 500;
+	margin: 0px 5px 0px 0px;
+}
+
+.clock_time_sep {
+    font-size: 14;
+    color: $foreground;
+    margin: 0px 4px 1px 4px;
+}
+.clock_time_class, .clock_minute_class {
+    font-size: 14;
+	font-weight: bold;
+	color: $foreground;
+}
+.clock_date_class {
+    font-size: 14;
+    margin: 0px 20px 0px -1px;
+    color: $magenta;
+}
+.clock_minute_class {
+	margin: 0px 20px 0px 0px;
+}
+
+.brightbar trough highlight {
+  background-image: linear-gradient(to right, $yellow 30%, $bright-yellow 50%, $white 100% *50);
+  border-radius: 10px;
+}
+.volbar trough highlight {
+  background-image: linear-gradient(to right, $cyan-light 30%, $cyan-med 50%, $cyan 100% *50);
+  border-radius: 10px;
+}
+.volume_icon {
+  font-size: 18;
+  color: $cyan;
+  margin: 0px 10px 0px 10px;
+}
+
+
+.module_essid {
+    font-size: 16;
+    color: $blue;
+    margin: 0px 10px 0px 0px;
+	background-color: $gray;
+}
+.module-wif {
+    font-size: 16;
+    color: $blue;
+    border-radius: 100%;
+    margin: -2px 24px 0px 0px;
+}
+
+
+.bright_icon {
+    font-size: 16;
+    color: $yellow;
+    margin: 0px 10px 0px 10px;
+}
+
+scale trough {
+  all: unset;
+  background-color: $black;
+  box-shadow: 0 2px 3px 2px $background;
+  border-radius: 16px;
+  min-height: 10px;
+  min-width: 70px;
+  margin: 0px 10px 0px 0px;
+}
+
+.works {
+font-size: 18px;
+font-weight: normal;
+margin: 8px 0px 0px 0px;
+background-color: $background;
+}
+
+.0 , .01, .02, .03, .04, .05, .06,
+.011, .022, .033, .044, .055, .066{
+  margin: 0px 20px 0px 0px;
+}
+
+/* Unoccupied */
+.0 {
+ color: $blue;
+}
+
+/* Occupied */
+.01, .02, .03, .04, .05, .06 {
+  color: $gray;
+  margin: 0px 20px 0px 0px;
+}
+
+/* Focused */
+.011, .022, .033, .044, .055, .066 {
+  color: $green;
+  margin: 0px 20px 0px 0px;
+}
+
+
+.song_cover_art {
+	background-size: cover;	
+	background-position: center;
+	min-height: 18px;
+	min-width: 24px;
+	margin: 10px;
+	border-radius: 100px;
+}
+
+.song {
+	color: $cyan;
+	font-size : 13px;
+	font-weight : bold;
+	margin : 3px 5px 0px 0px;
+}
+
+.song_btn_play {
+	color: $green;
+	font-size : 20px;
+	margin : 5px 0px 0px 5px;
+}
+
+
+.song_btn_prev, .song_btn_next {
+	color: $cyan;
+	font-size : 12px;
+	margin : 3px 0px 0px 0px;
+
+}
+// Calendar
+.cal {
+  background-color: $background;
+  font-family: FiraCode Nerd Font;
+  font-size: 18px;
+  font-weight: normal;
+  border-radius: 16px;
+
+.cal-in {
+    padding: 0px 10px 0px 10px;
+    color: $foreground;
+
+.cal {
+     &.highlight {
+          padding: 20px;
+      }
+
+      padding: 5px 5px 5px 5px;
+      margin-left: 10px;
+    }
+  }
+}
+
+calender {
+    color: $cyan;
+}
+calendar:selected {
+  color: $white;
+  background-color: #3d4a52;
+  border-radius: 6px;
+}
+
+calendar.header {
+color: $cyan;
+font-weight: bold;
+}
+
+calendar.button {
+color: $gray;
+}
+
+calendar.highlight {
+color: $cyan-light;
+font-weight: bold;
+}
+
+calendar:indeterminate {
+color: $cyan-med;
+}
+
+.music_pop {
+    background-color: $background;
+	border-radius: 16px;
+}
+  .music_cover_art {
+	background-size: cover;
+	background-position: center;
+	min-height: 100px;
+    box-shadow: 5px 5px 5px 5px $background;
+	min-width: 170px;
+	margin: 20px;
+	border-radius: 20px;
+}
+
+.music {
+	color: $foreground;
+	font-size : 20px;
+	font-weight : bold;
+	margin : 20px 0px 0px -15px;
+}
+
+.music_artist {
+	color: $foreground;
+	font-size : 16px;
+	font-weight : normal;
+	margin : 0px 0px 0px 0px;
+}
+
+.music_btn_prev, .music_btn_play, .music_btn_next {
+	font-family: FiraCode Nerd Font;
+}
+.music_btn_prev {
+	color: $cyan;
+	font-size : 14px;
+	font-weight : normal;
+	margin: 0px 0px 0px 0px;
+}
+.music_btn_play {
+	color: $cyan;
+	font-size : 16px;
+	font-weight : normal;
+	margin: 0px 0px 0px 0px;
+}
+.music_btn_next {
+	color:$cyan;
+	font-size : 14px;
+	font-weight : normal;
+	margin: 0px 0px 0px 5px;
+}
+
+.music_bar scale trough highlight {
+	all: unset;
+    background-image: linear-gradient(to right, $cyan-light 30%, $cyan-med 50%, $cyan 100% *50);
+	border-radius: 24px;
+}
+.music_bar scale trough {
+	all: unset;
+	background-color: $background;
+	border-radius: 24px;
+	min-height: 13px;
+	min-width: 190px;
+	margin : -10px 10px 20px 0px;
+}
+
+.audio-box {
+    background-color: $background;
+	border-radius: 16px;
+}
+.speaker_icon {
+	background-size: cover;
+    background-image: url('images/speaker.png');
+	background-position: center;
+	min-height: 70px;
+	min-width: 75px;
+	margin: 10px 20px 5px 20px;
+	border-radius: 12px;
+}
+
+.speaker_text {
+	color: $foreground;
+	font-size : 26px;
+	font-weight : bold;
+	margin: 20px 0px 0px 0px;
+}
+
+.speaker_bar scale trough highlight {
+	all: unset;
+    background-image: linear-gradient(to right, $cyan-light 30%, $cyan-med 50%, $cyan 100% *50);
+	border-radius: 24px;
+}
+.speaker_bar scale trough {
+	all: unset;
+	background-color: $black;
+	border-radius: 24px;
+	min-height: 13px;
+	min-width: 120px;
+	margin : 0px 0px 5px 0px;
+}
+
+.mic_icon {
+	background-size: cover;
+  background-image: url('images/mic.png');
+	background-position: center;
+	min-height: 70px;
+	min-width: 75px;
+	margin: 5px 20px 20px 20px;
+	border-radius: 12px;
+}
+
+.mic_text {
+	color: $foreground;
+	font-size : 26px;
+	font-weight : bold;
+	margin: 0px 0px 0px 0px;
+}
+
+.mic_bar scale trough highlight {
+	all: unset;
+    background-image: linear-gradient(to right, $cyan-light 30%, $cyan-med 50%, $cyan 100% *50);
+	border-radius: 24px;
+}
+.mic_bar scale trough {
+	all: unset;
+	background-color: $black;
+	border-radius: 24px;
+	min-height: 13px;
+	min-width: 120px;
+	margin : 0px 0px 20px 0px;
+}
+
+.audio_sep {
+    color: $foreground;
+    font-size: 18;
+	margin-right: 10;
+	margin-left: 10;	
+}
+
